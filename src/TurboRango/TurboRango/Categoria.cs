@@ -1,7 +1,7 @@
 ﻿
 namespace ConsoleApplication1
 {
-    internal enum Categoria
+    public enum Categoria
     {
         Comum,
         CozinhaNatural,
