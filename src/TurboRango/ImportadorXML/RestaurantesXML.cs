@@ -21,8 +21,8 @@ namespace ImportadorXML
         {
             this.NomeArquivo = nomeArquivo;
             restaurantes = XDocument.Load(NomeArquivo).Descendants("restaurante");
-            localizacao = XDocument.Load(NomeArquivo).Descendants("restaurante").Descendants("localizacao");
-            contato = XDocument.Load(NomeArquivo).Descendants("restaurante").Descendants("contato");
+            localizacao = restaurantes.Descendants("localizacao");
+            contato = restaurantes.Descendants("contato");
         }
 
         public IList<string> ObterNomes()
@@ -59,15 +59,6 @@ namespace ImportadorXML
                 select Convert.ToInt32(n.Attribute("capacidade").Value)).Max();
         }
 
-        public IList<Restaurante> AgruparPorCategorias()
-        {
-            var res = from n in restaurantes
-                      group n by n.Attribute("categoria").Value into g
-                      select new { Categoria = g.Key, Restaurantes = g.ToList()};
-
-            throw new NotImplementedException();
-        }
-
         public IList<string> OrdenarPorNomeAsc()
         {
             return (from n in ObterNomes()
@@ -81,6 +72,17 @@ namespace ImportadorXML
                 .Descendants("site")
                 .Select(x => x.Value)
                 .ToList();
+        }
+
+        public object AgruparPorCategoria()
+        {
+            return restaurantes
+                .GroupBy(r => new
+                {
+                    Categorias = r.Attribute("categoria"),
+                    Restaurantes = restaurantes
+                })
+                .Select(r => r);
         }
     }
 }
