@@ -10,6 +10,8 @@ namespace ImportadorXML
     {
         public string NomeArquivo { get; private set; }
         IEnumerable<XElement> restaurantes;
+        IEnumerable<XElement> localizacao;
+        IEnumerable<XElement> contato;
 
         /// <summary>
         /// CONSTRÓI RestaurantesXML
@@ -19,13 +21,15 @@ namespace ImportadorXML
         {
             this.NomeArquivo = nomeArquivo;
             restaurantes = XDocument.Load(NomeArquivo).Descendants("restaurante");
+            localizacao = XDocument.Load(NomeArquivo).Descendants("restaurante").Descendants("localizacao");
+            contato = XDocument.Load(NomeArquivo).Descendants("restaurante").Descendants("contato");
         }
 
         public IList<string> ObterNomes()
         {
-            var resultado = new List<string>();
-
             /*
+            var resultado = new List<string>();
+            
             foreach (var item in nodos)
             {
                 resultado.Add(item.Attribute("nome").Value);
@@ -62,6 +66,21 @@ namespace ImportadorXML
                       select new { Categoria = g.Key, Restaurantes = g.ToList()};
 
             throw new NotImplementedException();
+        }
+
+        public IList<string> OrdenarPorNomeAsc()
+        {
+            return (from n in ObterNomes()
+                   orderby n
+                   select n).ToList();
+        }
+
+        public IList<string> ObterSites()
+        {
+            return contato
+                .Descendants("site")
+                .Select(x => x.Value)
+                .ToList();
         }
     }
 }

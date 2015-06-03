@@ -14,6 +14,9 @@ namespace ImportadorXML
             var nomes = rxml.ObterNomes();
             var capacidadeMedia = rxml.CapacidadeMedia();
             var capacidadeMaxima = rxml.CapacidadeMaxima();
+            var ordenarNomesAsc = rxml.OrdenarPorNomeAsc();
+            var obterSites = rxml.ObterSites();
+
         }
     }
 }
