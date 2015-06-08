@@ -98,10 +98,6 @@ namespace ImportadorXML
 
 
 /* ESTUDAR CÓDIGO
-public IList<Categoria> ApenasComUmRestaurante()
-        {
-            return restaurantes.GroupBy(x => x.Attribute("categoria").Value).Where(g => g.Count() == 1).Select(g => g.Key.ToEnum<Categoria>() ).ToList();
-        }
 
         public IList<Categoria> ApenasMaisPopulares()
         {
