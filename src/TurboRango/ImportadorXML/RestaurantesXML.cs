@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
+using TurboRango.Dominio;
 
 namespace ImportadorXML
 {
@@ -93,11 +94,10 @@ namespace ImportadorXML
                 .Select(g => Enum.Parse(typeof(Categoria),g.Key)/*.ToEnum<Categoria>()*/)
                 .ToList();
         }
-    }
-}
 
 
-/* ESTUDAR CÓDIGO
+        //ESTUDAR CÓDIGO
+
 
         public IList<Categoria> ApenasMaisPopulares()
         {
@@ -152,22 +152,23 @@ namespace ImportadorXML
                 let localizacao = n.Element("localizacao")
                 select new Restaurante
                 {
-                     Nome = n.Attribute("nome").Value,
-                     Capacidade = Convert.ToInt32(n.Attribute("capacidade").Value),
-                     Categoria = (Categoria)Enum.Parse(typeof(Categoria), n.Attribute("categoria").Value, ignoreCase: true),
-                     Contato = new Contato
-                     {
-                          Site = site,
-                          Telefone = telefone
-                     },
-                     Localizacao = new Localizacao
-                     {
-                          Bairro = localizacao.Element("bairro").Value,
-                          Logradouro = localizacao.Element("logradouro").Value,
-                          Latitude = Convert.ToDouble(localizacao.Element("latitude").Value),
-                          Longitude = Convert.ToDouble(localizacao.Element("longitude").Value)
-                     }
+                    Nome = n.Attribute("nome").Value,
+                    Capacidade = Convert.ToInt32(n.Attribute("capacidade").Value),
+                    Categoria = (Categoria)Enum.Parse(typeof(Categoria), n.Attribute("categoria").Value, ignoreCase: true),
+                    Contato = new Contato
+                    {
+                        Site = site,
+                        Telefone = telefone
+                    },
+                    Localizacao = new Localizacao
+                    {
+                        Bairro = localizacao.Element("bairro").Value,
+                        Logradouro = localizacao.Element("logradouro").Value,
+                        Latitude = Convert.ToDouble(localizacao.Element("latitude").Value),
+                        Longitude = Convert.ToDouble(localizacao.Element("longitude").Value)
+                    }
                 }
             );
         }
-*/
+    }
+}

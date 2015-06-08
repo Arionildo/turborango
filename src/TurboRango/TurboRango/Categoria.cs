@@ -1,12 +1,11 @@
-﻿
-namespace ConsoleApplication1
+﻿namespace TurboRango.Dominio
 {
     public enum Categoria
     {
         Comum,
         CozinhaNatural,
         CozinhaMexicana,
-        Churrasqueira,
+        Churrascaria,
         CozinhaJaponesa,
         Fastfood,
         Pizzaria
