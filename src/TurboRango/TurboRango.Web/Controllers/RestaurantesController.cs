@@ -16,10 +16,17 @@ namespace TurboRango.Web.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Restaurantes
+<<<<<<< HEAD
+        //public ActionResult Index()
+        //{
+        //    return View(db.Restaurantes.ToList());
+        //}
+=======
         public ActionResult Index()
         {
             return View(db.Restaurantes.ToList());
         }
+>>>>>>> b21e25d03bee323dec85812d84c78a6d09a02abb
 
         // GET: Restaurantes/Details/5
         public ActionResult Details(int? id)
@@ -37,10 +44,17 @@ namespace TurboRango.Web.Controllers
         }
 
         // GET: Restaurantes/Create
+<<<<<<< HEAD
+        //public ActionResult Create()
+        //{
+        //    return View();
+        //}
+=======
         public ActionResult Create()
         {
             return View();
         }
+>>>>>>> b21e25d03bee323dec85812d84c78a6d09a02abb
 
         // POST: Restaurantes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -60,6 +74,21 @@ namespace TurboRango.Web.Controllers
         }
 
         // GET: Restaurantes/Edit/5
+<<<<<<< HEAD
+        //public ActionResult Edit(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Restaurante restaurante = db.Restaurantes.Find(id);
+        //    if (restaurante == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(restaurante);
+        //}
+=======
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,6 +102,7 @@ namespace TurboRango.Web.Controllers
             }
             return View(restaurante);
         }
+>>>>>>> b21e25d03bee323dec85812d84c78a6d09a02abb
 
         // POST: Restaurantes/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -91,6 +121,21 @@ namespace TurboRango.Web.Controllers
         }
 
         // GET: Restaurantes/Delete/5
+<<<<<<< HEAD
+        //public ActionResult Delete(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Restaurante restaurante = db.Restaurantes.Find(id);
+        //    if (restaurante == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(restaurante);
+        //}
+=======
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,6 +149,7 @@ namespace TurboRango.Web.Controllers
             }
             return View(restaurante);
         }
+>>>>>>> b21e25d03bee323dec85812d84c78a6d09a02abb
 
         // POST: Restaurantes/Delete/5
         [HttpPost, ActionName("Delete")]
@@ -116,6 +162,16 @@ namespace TurboRango.Web.Controllers
             return RedirectToAction("Index");
         }
 
+<<<<<<< HEAD
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing)
+        //    {
+        //        db.Dispose();
+        //    }
+        //    base.Dispose(disposing);
+        //}
+=======
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -124,5 +180,6 @@ namespace TurboRango.Web.Controllers
             }
             base.Dispose(disposing);
         }
+>>>>>>> b21e25d03bee323dec85812d84c78a6d09a02abb
     }
 }
