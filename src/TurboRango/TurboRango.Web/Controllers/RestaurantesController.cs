@@ -17,11 +17,6 @@ namespace TurboRango.Web.Controllers
 
         // GET: Restaurantes
 
-        //public ActionResult Index()
-        //{
-        //    return View(db.Restaurantes.ToList());
-        //}
-
         public ActionResult Index()
         {
             return View(db.Restaurantes.ToList());
@@ -44,11 +39,6 @@ namespace TurboRango.Web.Controllers
         }
 
         // GET: Restaurantes/Create
-
-        //public ActionResult Create()
-        //{
-        //    return View();
-        //}
 
         public ActionResult Create()
         {
@@ -74,20 +64,6 @@ namespace TurboRango.Web.Controllers
         }
 
         // GET: Restaurantes/Edit/5
-
-        //public ActionResult Edit(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Restaurante restaurante = db.Restaurantes.Find(id);
-        //    if (restaurante == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(restaurante);
-        //}
 
         public ActionResult Edit(int? id)
         {
@@ -122,20 +98,6 @@ namespace TurboRango.Web.Controllers
 
         // GET: Restaurantes/Delete/5
 
-        //public ActionResult Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Restaurante restaurante = db.Restaurantes.Find(id);
-        //    if (restaurante == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(restaurante);
-        //}
-
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -161,16 +123,6 @@ namespace TurboRango.Web.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
-
-        //protected override void Dispose(bool disposing)
-        //{
-        //    if (disposing)
-        //    {
-        //        db.Dispose();
-        //    }
-        //    base.Dispose(disposing);
-        //}
 
         protected override void Dispose(bool disposing)
         {
