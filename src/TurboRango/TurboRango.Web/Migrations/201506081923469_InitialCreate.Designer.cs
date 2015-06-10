@@ -13,7 +13,7 @@ namespace TurboRango.Web.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201506081933179_InitialCreate"; }
+            get { return "201506081923469_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

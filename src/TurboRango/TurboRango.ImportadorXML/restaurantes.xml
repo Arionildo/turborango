@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <restaurantes>
-  <restaurante nome="GARFÃƒO RESTAURANTE E PIZZARIA" categoria="comum" capacidade="100">
+  <restaurante nome="GARFÃO RESTAURANTE E PIZZARIA" categoria="comum" capacidade="100">
     <localizacao>
       <logradouro>Rua Sete de Setembro, 1045 - Liberdade</logradouro>
       <bairro>Liberdade</bairro>
@@ -23,7 +23,7 @@
       <telefone>3595-5258</telefone>
     </contato>
   </restaurante>
-  <restaurante nome="OLÃ‰ ARMAZÃ‰M MEXICANO" categoria="cozinhamexicana" capacidade="30">
+  <restaurante nome="OLÉ ARMAZÉM MEXICANO" categoria="cozinhamexicana" capacidade="30">
     <localizacao>
       <logradouro>Rua Gomes Portinho, 448</logradouro>
       <bairro>Centro</bairro>
@@ -48,7 +48,7 @@
   </restaurante>
   <restaurante nome="SUSHI DAI" categoria="cozinhajaponesa" capacidade="40">
     <localizacao>
-      <logradouro>BagÃ©, 149</logradouro>
+      <logradouro>Bagé, 149</logradouro>
       <bairro>Boa Vista</bairro>
       <latitude>-29,68942</latitude>
       <longitude>-51,125224</longitude>
@@ -56,8 +56,8 @@
   </restaurante>
   <restaurante nome="TAKESHI" categoria="cozinhajaponesa" capacidade="35">
     <localizacao>
-      <logradouro>Rua ConfraternizaÃ§Ã£o, 792</logradouro>
-      <bairro>PÃ¡tria Nova</bairro>
+      <logradouro>Rua Confraternização, 792</logradouro>
+      <bairro>Pátria Nova</bairro>
       <latitude>-29,698669</latitude>
       <longitude>-51,130195</longitude>
     </localizacao>
@@ -65,10 +65,10 @@
       <telefone>3066-6660</telefone>
     </contato>
   </restaurante>
-  <restaurante nome="HAI SAIKÃ”" categoria="cozinhajaponesa" capacidade="75">
+  <restaurante nome="HAI SAIKÔ" categoria="cozinhajaponesa" capacidade="75">
     <localizacao>
       <logradouro>Rua Gomes Portinho, 730</logradouro>
-      <bairro>MauÃ¡</bairro>
+      <bairro>Mauá</bairro>
       <latitude>-29,684873</latitude>
       <longitude>-51,122252</longitude>
     </localizacao>
@@ -79,7 +79,7 @@
   </restaurante>
   <restaurante nome="PICA-PAU LANCHES" categoria="fastfood" capacidade="30">
     <localizacao>
-      <logradouro>Rua: JosÃ© do PatrocÃ­nio, 880</logradouro>
+      <logradouro>Rua: José do Patrocínio, 880</logradouro>
       <bairro>Rio Branco</bairro>
       <latitude>-29,68339</latitude>
       <longitude>-51,135376</longitude>
@@ -91,7 +91,7 @@
   </restaurante>
   <restaurante nome="FOFINHO LANCHES" categoria="fastfood" capacidade="80">
     <localizacao>
-      <logradouro>Rua General OsÃ³rio, 312</logradouro>
+      <logradouro>Rua General Osório, 312</logradouro>
       <bairro>Hamburgo Velho</bairro>
       <latitude>-29,688934</latitude>
       <longitude>-51,137052</longitude>
@@ -113,7 +113,7 @@
   </restaurante>
   <restaurante nome="LA CARBONERA" categoria="pizzaria" capacidade="135">
     <localizacao>
-      <logradouro>Avenida Dr. MaurÃ­cio Cardoso, 1904</logradouro>
+      <logradouro>Avenida Dr. Maurício Cardoso, 1904</logradouro>
       <bairro>Hamburgo Velho</bairro>
       <latitude>-29,6871764</latitude>
       <longitude>-51,1217197</longitude>
@@ -157,7 +157,7 @@
   </restaurante>
   <restaurante nome="DEL PIETRO" categoria="comum" capacidade="115">
     <localizacao>
-      <logradouro>Avenida Dr. MaurÃ­cio Cardoso, 137</logradouro>
+      <logradouro>Avenida Dr. Maurício Cardoso, 137</logradouro>
       <bairro>Hamburgo Velho</bairro>
       <latitude>-29,6747349</latitude>
       <longitude>-51,1116387</longitude>
@@ -177,7 +177,7 @@
       <telefone>35823000</telefone>
     </contato>
   </restaurante>
-  <restaurante nome="RESTAURANTE HABITUÃ‰" categoria="comum" capacidade="90">
+  <restaurante nome="RESTAURANTE HABITUÉ" categoria="comum" capacidade="90">
     <localizacao>
       <logradouro>Joaquim Nabuco, 1117</logradouro>
       <bairro>Centro</bairro>

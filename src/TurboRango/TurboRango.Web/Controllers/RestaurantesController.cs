@@ -11,17 +11,19 @@ using TurboRango.Web.Models;
 
 namespace TurboRango.Web.Controllers
 {
+    [Authorize]
     public class RestaurantesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Restaurantes
-
         public ActionResult Index()
         {
-            return View(db.Restaurantes.ToList());
+            var restaurantes = db.Restaurantes
+                .Include(x => x.Contato)
+                .Include(x => x.Localizacao);
+            return View(restaurantes.ToList());
         }
- 
 
         // GET: Restaurantes/Details/5
         public ActionResult Details(int? id)
@@ -39,19 +41,17 @@ namespace TurboRango.Web.Controllers
         }
 
         // GET: Restaurantes/Create
-
         public ActionResult Create()
         {
             return View();
         }
- 
 
         // POST: Restaurantes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Categoria,Capacidade,Nome")] Restaurante restaurante)
+        public ActionResult Create([Bind(Include = "Id,Capacidade,Nome,Categoria")] Restaurante restaurante)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +64,6 @@ namespace TurboRango.Web.Controllers
         }
 
         // GET: Restaurantes/Edit/5
-
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,14 +77,13 @@ namespace TurboRango.Web.Controllers
             }
             return View(restaurante);
         }
- 
 
         // POST: Restaurantes/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Categoria,Capacidade,Nome")] Restaurante restaurante)
+        public ActionResult Edit([Bind(Include = "Id,Capacidade,Nome,Categoria")] Restaurante restaurante)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +95,6 @@ namespace TurboRango.Web.Controllers
         }
 
         // GET: Restaurantes/Delete/5
-
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -111,7 +108,6 @@ namespace TurboRango.Web.Controllers
             }
             return View(restaurante);
         }
- 
 
         // POST: Restaurantes/Delete/5
         [HttpPost, ActionName("Delete")]
@@ -132,6 +128,5 @@ namespace TurboRango.Web.Controllers
             }
             base.Dispose(disposing);
         }
- 
     }
 }

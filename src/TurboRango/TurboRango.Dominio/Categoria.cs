@@ -8,6 +8,6 @@
         Churrascaria,
         CozinhaJaponesa,
         Fastfood,
-        Pizzaria,
+        Pizzaria
     }
 }

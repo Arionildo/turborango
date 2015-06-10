@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ImportadorXML")]
+[assembly: AssemblyTitle("TurboRango.ImportadorXML")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ImportadorXML")]
+[assembly: AssemblyProduct("TurboRango.ImportadorXML")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e7ae9f6e-5d5d-41c7-aea9-32b1ad29ad51")]
+[assembly: Guid("1fcbc8fe-3f1d-4515-9e4a-f68f71fe5c96")]
 
 // Version information for an assembly consists of the following four values:
 //

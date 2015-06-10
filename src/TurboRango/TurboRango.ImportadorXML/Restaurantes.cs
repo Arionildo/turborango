@@ -1,19 +1,14 @@
-﻿using ConsoleApplication1;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using TurboRango.Dominio;
+using TurboRango.Dominio.Utils;
 
 namespace TurboRango.ImportadorXML
 {
     public class Restaurantes
     {
-        
-        
-        // ESTUDAR CÓDIGO
-
-
         readonly static string INSERT_SQL = "INSERT INTO [dbo].[Restaurante] ([Capacidade],[Nome],[Categoria],[ContatoId],[LocalizacaoId]) VALUES (@Capacidade, @Nome, @Categoria, @ContatoId, @LocalizacaoId);";
         readonly static string DELETE_SQL = "DELETE [dbo].[Restaurante] WHERE [Id] = @Id";
         readonly static string SELECT_FKS = "SELECT [ContatoId], [LocalizacaoId] FROM [dbo].[Restaurante] WITH (nolock) WHERE [Id] = @Id";

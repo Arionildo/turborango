@@ -12,9 +12,9 @@ namespace TurboRango.Web.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Categoria = c.Int(nullable: false),
-                        Capacidade = c.Int(nullable: false),
+                        Capacidade = c.Int(),
                         Nome = c.String(),
+                        Categoria = c.Int(nullable: false),
                         Contato_Id = c.Int(),
                         Localizacao_Id = c.Int(),
                     })

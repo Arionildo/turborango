@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TurboRango.Dominio
+namespace TurboRango.Dominio.Utils
 {
     public static class StringExtensions
     {
