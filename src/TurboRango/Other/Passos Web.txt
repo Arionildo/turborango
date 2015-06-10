@@ -1,0 +1,5 @@
+Enable-Migrations 
+Add-Migration
+(dar nome tudo em maiusculo)
+CriarEntidades
+Update-Database

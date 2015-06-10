@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Sorteio de Restaurantes</h2>
+
+<h3 id ="feedback">Sorteando entre @ViewBag.QtdRestaurantes restaurantes</h3>
+
+@section Scripts {
+@Scripts.Render("~/bundles/haversine")
+    <script>
+        var qtdRestaurantes = @ViewBag.QtdRestaurantes;
+
+        var feedback = $('#feedback');
+        
+        var gerarRandomico = function (min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        };
+        
+        var distancia = function (coord1, coord2) {
+            return haversine(coord1, { latitude: coord2.Latitude, longitude: coord2.Longitude }, { unit: 'km' });
+        };
+        
+        var round = function(n) {
+            return Math.round(n * 100) / 100;
+        };
+
+        navigator.geolocation.getCurrentPosition(
+            function success(resultado) {
+
+                var posicaoAtual = resultado.coords;
+                var distancia1;
+                var distancia2;
+
+                $.get('@Url.Action("Restaurantes", "Restaurantes")')
+                    .done(function(response) {
+                        response.restaurantes.sort(function(r1, r2) {
+                            if (r1.Localizacao !== null && r2.Localizacao !== null) {
+                                distancia1 = haversine(posicaoAtual, { latitude: r1.Localizacao.Latitude, longitude: r1.Localizacao.Longitude }, {unit: 'km'});
+                                distancia2 = haversine(posicaoAtual, { latitude: r2.Localizacao.Latitude, longitude: r2.Localizacao.Longitude }, {unit: 'km'});
+                                return distancia1 > distancia2;
+                            }
+                        });
+
+                        var random = gerarRandomico(0, response.restaurantes.length);
+                        var escolhido = response.restaurantes[random % 10];
+
+                        feedback.text('O restaurante que eu te indico hoje é o '+ escolhido.Nome + '! A apenas' + round(distancia(posicaoAtual, escolhido.Localizacao)) + ' km daqui.');
+                    });
+            },
+            function error(err) {
+                console.error(err);
+            },
+            { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+        );
+
+
+    </script>
+}
