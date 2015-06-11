@@ -5,6 +5,7 @@ namespace TurboRango.Web.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
     using TurboRango.Dominio;
+    using TurboRango.Web.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<TurboRango.Web.Models.ApplicationDbContext>
     {
@@ -306,6 +307,19 @@ namespace TurboRango.Web.Migrations
                     {
                         Telefone = "35931602"
                     }
+                }
+            );
+
+            context.Reservas.AddOrUpdate(
+                r => r.Usuario,
+                new Reservas
+                {
+                    Usuario = "arionildo@escouto.com",
+                    Restaurante = "ADAMS PIZZARIA",
+                    QuantidadeSolicitada = 82,
+                    Dia = new DateTime(2015, 06, 23),
+                    Inicio = new TimeSpan(19, 00, 0),
+                    Fim = new TimeSpan(23, 00, 0)
                 }
             );
         }

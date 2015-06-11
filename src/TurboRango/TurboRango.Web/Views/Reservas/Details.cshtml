@@ -1,0 +1,66 @@
+﻿@model TurboRango.Web.Models.Reservas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reservas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Restaurante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Restaurante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeSolicitada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeSolicitada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fim)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
