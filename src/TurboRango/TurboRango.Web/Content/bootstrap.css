@@ -4156,6 +4156,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
 }
 
+
+
 .navbar-static-top {
   border-width: 0 0 1px;
 }
@@ -6813,4 +6815,32 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+}
+
+.jumbotron, .navbar-brand{
+    background-color: #101010;
+    color: rgb(255, 68, 0);
+}
+
+.navbar, .navbar-header, .navbar-brand, .body-content {
+    background-color: rgb(255, 68, 0) !important;
+}
+
+a {
+    color: #101010 !important;
+}
+
+.btn, .btn-primary, .btn-lg, th {
+    background-color: #101010 !important;
+    color: rgb(255, 68, 0) !important;
+    border-color: rgb(255, 68, 0);
+}
+
+.td {
+    font-weight: bold !important;
+}
+
+.body-content {
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
 }

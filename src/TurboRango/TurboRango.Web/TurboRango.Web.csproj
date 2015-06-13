@@ -162,6 +162,11 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ReservasController.cs" />
+    <Compile Include="Migrations\201506120004193_EntidadeTeste.cs" />
+    <Compile Include="Migrations\201506120004193_EntidadeTeste.Designer.cs">
+      <DependentUpon>201506120004193_EntidadeTeste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reservas.cs" />
     <Compile Include="Controllers\RestaurantesController.cs" />
     <Compile Include="Controllers\SorteiosController.cs" />
     <Compile Include="Global.asax.cs">
@@ -275,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506081947023_CriarEntidades.resx">
       <DependentUpon>201506081947023_CriarEntidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506120004193_EntidadeTeste.resx">
+      <DependentUpon>201506120004193_EntidadeTeste.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

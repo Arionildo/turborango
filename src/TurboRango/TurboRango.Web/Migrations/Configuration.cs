@@ -322,6 +322,16 @@ namespace TurboRango.Web.Migrations
                     Fim = new TimeSpan(23, 00, 0)
                 }
             );
+                x => x.Usuario,
+                new Reservas
+                {
+                    Usuario = "arionildo@escouto.com",
+                    Restaurante = "RESTAURANTE HABITUÉ",
+                    QuantidadeSolicitada = 52,
+                    Dia = new DateTime(2015,06,25),
+                    Inicio = new TimeSpan(19,00,0),
+                    Fim = new TimeSpan(23,00,0)
+                });
         }
     }
 }
